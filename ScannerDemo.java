@@ -5,16 +5,15 @@
  */
 public class ScannerDemo {
 
-	// This needs to be changed !
-	private static String file1 = "C:\\Users\\cscharff\\eclipse-workspace\\ScannerSolution\\src\\prog1.jay";
 	private static int counter = 1;
 
 	public static void main(String args[]) {
+		String file1 = args.length > 0 ? args[0] : "prog1.jay";
 		TokenStream ts = new TokenStream(file1);
 		System.out.println(file1);
 		while (!ts.isEndofFile()) {
-			// TO BE COMPLETED
-			// System.out.println("Token " + counter++ + " - Type: " + tk.getType() + " - Value: " + tk.getValue());
+			Token tk = ts.nextToken();
+			System.out.println("Token " + counter++ + " - Type: " + tk.getType() + " - Value: " + tk.getValue());
 		}
 	}
 }
