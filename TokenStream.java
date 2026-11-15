@@ -55,10 +55,10 @@ public class TokenStream {
 			// there are two comment lines in a row.
 			nextChar = readChar();
 			if (nextChar == '/') { // If / is followed by another /
-				// skip rest of line - it's a comment.
-				// TODO TO BE COMPLETED
-				// look for <cr>, <lf>, <ff>
-
+				while (!isEof && !isEndOfLine(nextChar)) {
+					nextChar = readChar();
+				}
+				skipWhiteSpace();
 			} else {
 				// A slash followed by anything else must be an operator.
 				t.setValue("/");
