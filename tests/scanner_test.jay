@@ -1,0 +1,93 @@
+// Scanner tests for JAY
+// Run: java ScannerDemo tests/scanner_test.jay
+
+// keywords
+boolean
+else
+if
+int
+main
+while
+void
+
+// separators
+(
+)
+{
+}
+;
+, // comma
+
+// operators
+||
+!
+&&
+!=
+==
+>=
+<=
+<
+>
+/
+*
+-
++
+=
+
+// identifiers
+a
+aa
+x
+counter
+a3
+do // identifier
+True // identifier
+False // identifier
+X3
+TRUE // identifier
+Xy1 // capital first letter
+
+// literals
+true
+false
+0
+1
+9
+10
+30
+100
+256
+6594
+543922
+432205294320580285
+
+// lexical errors (Other)
+3aaa2
+@
+&
+|
+~
+2.5
+:
+\
+[
+]
+
+// combinations
+1!2 // literal operator literal
+1!=2 // literal operator(!=) literal
+1! == 3 // literal operator operator literal
+1==>4 // literal operator(==) operator(>) literal
+** // operator operator
+True && False // identifier operator identifier
+1,000,000 // literal separator literal separator literal
+/* test */ // operator operator identifier operator operator
+!5 // operator literal
+!== // operator(!=) operator(=)
+
+// a full program
+void main(){
+int i;
+i = 7;
+}
+// comment on the last line without a newline
